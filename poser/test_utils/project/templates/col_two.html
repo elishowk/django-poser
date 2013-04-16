@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n  %}
+
+{% block tpl_id %}tpl_col_two{% endblock %}
+
+{% block content %}
+    <div id="col1" class="grid_4">	    
+		{% include "sidebar_submenu.html" %}	
+		{% block col_sidebar %}
+		{% endblock %}
+    </div>
+	
+    <div id="col2" class="grid_11 push_1">
+    	{% block page_title %}<h1>{% page_attribute title %}</h1>{% endblock %}
+		{% block col_left %}
+		{% endblock %}
+    </div>
+{% endblock %}
